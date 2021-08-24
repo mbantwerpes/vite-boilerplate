@@ -9,7 +9,7 @@ const port = process.env.PORT || 3001;
 app.use(express.json());
 
 app.get('/api', (_request, response) => {
-  response.json('Hello API!');
+  response.json({ message: 'Hello API!' });
 });
 
 app.use('/storybook', express.static('dist/storybook'));
