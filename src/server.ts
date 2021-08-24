@@ -6,8 +6,10 @@ import express from 'express';
 const app = express();
 const port = process.env.PORT || 3001;
 
+app.use(express.json());
+
 app.get('/api', (_request, response) => {
-  response.send('Hello API!');
+  response.json('Hello API!');
 });
 
 app.use('/storybook', express.static('dist/storybook'));
